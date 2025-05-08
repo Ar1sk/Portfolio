@@ -1,0 +1,185 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Greenhouse Plant Growth  | Kaggle</title>
+  <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+  <meta name="description" content="Advanced IoT-Based Smart Greenhouse Dataset (Agriculture Growth Monitoring)" />
+    <meta name="keywords" content="earth and nature,biology,earth science" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="vLspUIHUHumQcvh2HU4wgA==" type="text/javascript">
+    window["pageRequestStartTime"] = 1746698388342;
+    window["pageRequestEndTime"] = 1746698388438;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <script nonce="vLspUIHUHumQcvh2HU4wgA==" id="gsi-client" src="https://accounts.google.com/gsi/client" async defer></script>
+  <script nonce="vLspUIHUHumQcvh2HU4wgA==">window.KAGGLE_JUPYTERLAB_PATH = "/static/assets/jupyterlab-v4/jupyterlab-index-1d8633aa52b8800c96b3.html";</script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+    <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" id="dynamic-favicon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Symbols:FILL@0..1&display=block"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Symbols:FILL@0..1&display=block"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="vLspUIHUHumQcvh2HU4wgA==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+
+    <link rel="canonical" href="https://www.kaggle.com/datasets/adilshamim8/greenhouse-plant-growth-metrics" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=2d4e7ec4eb689d926191" />
+
+  
+    
+ 
+      <script nonce="vLspUIHUHumQcvh2HU4wgA==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="vLspUIHUHumQcvh2HU4wgA==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-T7QHS60L4Q', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets'
+        });
+    </script>
+    <script nonce="vLspUIHUHumQcvh2HU4wgA==" async src="https://www.googletagmanager.com/gtag/js?id=G-T7QHS60L4Q"></script>
+
+  
+    
+    <meta property="og:url" content="https://www.kaggle.com/datasets/adilshamim8/greenhouse-plant-growth-metrics" />
+    <meta property="og:title" content="Greenhouse Plant Growth " />
+    <meta property="og:description" content="Advanced IoT-Based Smart Greenhouse Dataset (Agriculture Growth Monitoring)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/7188251/11470322/67742f08cabd6d901dacf784a40263b8/dataset-card.jpg?t=2025-04-19-07-53-18" />
+    <meta property="fb:app_id" content="2665027677054710" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggledatasets" />
+        <meta name="twitter:creator" content="@adil_shamim8" />
+
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+            <script nonce="vLspUIHUHumQcvh2HU4wgA==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":"Greenhouse Plant Growth ","description":"The **Advanced IoT Agriculture Dataset** captures detailed physiological and morphological measurements of plants grown under two greenhouse settings (IoT‑enabled vs. traditional) at Tikrit University’s Agriculture Lab. Compiled by Mohammed Ismail Lifta (2023–2024) under the supervision of Prof.&nbsp;Wisam Dawood Abdullah, it comprises **30,000 records** spanning **14 variables** that quantify chlorophyll levels, growth rates, biomass (wet/dry weight), root metrics, and more, alongside a final categorical **Class** label.\n\n---\n\n## Description\n\n### 1. Data Collection  \n- **Location &amp; Period**: Agriculture Lab, College of Computer Science &amp; Mathematics, Tikrit University, Iraq (2023–2024).  \n- **Greenhouse Types**:  \n  - **IoT Greenhouse**: Plants monitored via sensors capturing real‑time chlorophyll, moisture, and growth data.  \n  - **Traditional Greenhouse**: Manually recorded metrics following standard sampling protocols.  \n- **Sampling**: Randomized batches (Random identifiers R1–R3) to ensure representative coverage across plant stages and conditions.\n\n### 2. Dataset Structure  \n| Column | Description | Type |\n|---|---|---|\n| Random | Sample batch ID (e.g., R1, R2, R3) | String |\n| ACHP | Average chlorophyll content (photosynthetic pigment) | Float |\n| PHR | Plant height growth rate | Float |\n| AWWGV | Average wet weight of vegetative growth | Float |\n| ALAP | Average leaf area per plant | Float |\n| ANPL | Average number of leaves per plant | Float |\n| ARD | Average root diameter | Float |\n| ADWR | Average dry weight of roots | Float |\n| PDMVG | % dry matter in vegetative growth | Float |\n| ARL | Average root length | Float |\n| AWWR | Average wet weight of roots | Float |\n| ADWV | Average dry weight of vegetative parts | Float |\n| PDMRG | % dry matter in root growth | Float |\n| Class | Experimental group label (SA, SB, SC, TA, TB, TC) | Categorical |\n\n### 3. Potential Use Cases  \n- **Environmental &amp; Agricultural Research**: Analyze how sensor‑driven IoT interventions impact plant health vs. traditional methods.  \n- **Machine Learning**: Build classification models to predict treatment class from physiological features or regression models forecasting biomass and growth rates.  \n- **Plant Physiology Studies**: Correlate chlorophyll content with leaf area, root architecture, and dry‑matter percentages.\n\n### 4. License &amp; Citation  \n- **License**: CC&nbsp;BY‑ND. Proper attribution required for any publication or derivative.  \n- **Original Source**: Lifta, M.&nbsp;I. (2023–2024). Master’s Thesis, Department of Computer Science, Tikrit University—supervised by Prof.&nbsp;Wisam Dawood Abdullah.  \n- **OpenML Entry**: [OpenML dataset&nbsp;ID&nbsp;46871] (unavailable via direct fetch).\n\n### 5. Contact  \nFor questions or collaboration inquiries, please reach out to:  \n- **Prof.&nbsp;Wisam&nbsp;Dawood&nbsp;Abdullah**  \n- Email:&nbsp;wisamdawood@tu.edu.iq","url":"https://www.kaggle.com/adilshamim8/greenhouse-plant-growth-metrics","version":1,"keywords":["subject, earth and nature","subject, earth and nature, biology","subject, earth and nature, earth science"],"license":{"@type":"CreativeWork","name":"CC BY-NC-SA 4.0","url":"https://creativecommons.org/licenses/by-nc-sa/4.0/"},"identifier":["7188251"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Person","name":"Adil Shamim","url":"https://www.kaggle.com/adilshamim8","image":"https://storage.googleapis.com/kaggle-avatars/thumbnails/22146488-kg.jpg?t=2025-03-31-06-42-29"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/datasets/adilshamim8/greenhouse-plant-growth-metrics/download?datasetVersionNumber=1","contentSize":"3041046 bytes"}],"commentCount":0,"dateModified":"2025-04-19T07:33:57.787Z","discussionUrl":"https://www.kaggle.com/adilshamim8/greenhouse-plant-growth-metrics/discussion","alternateName":"Advanced IoT-Based Smart Greenhouse Dataset (Agriculture Growth Monitoring)","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/7188251/11470322/67742f08cabd6d901dacf784a40263b8/dataset-card.jpg?t=2025-04-19-07-53-18","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":0},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":952},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":4817},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":14}]}</script>
+        
+
+  
+    
+
+  
+    
+
+
+    <script nonce="vLspUIHUHumQcvh2HU4wgA==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="vLspUIHUHumQcvh2HU4wgA==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="vLspUIHUHumQcvh2HU4wgA==" src="/static/assets/runtime.js?v=a81dfc8c11d42f2627be"></script>
+  <script nonce="vLspUIHUHumQcvh2HU4wgA==" src="/static/assets/vendor.js?v=42b0e7abe0d4aafb8397"></script>
+  <script nonce="vLspUIHUHumQcvh2HU4wgA==" src="/static/assets/app.js?v=08f9741ed33e0da495de"></script>
+    <script nonce="vLspUIHUHumQcvh2HU4wgA==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+<body>
+  <div id="root">
+    
+
+
+
+
+
+
+
+
+<script nonce="vLspUIHUHumQcvh2HU4wgA==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    jax: ['input/TeX', 'output/SVG'],
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: ["Safe.js"],
+    });
+</script>
+<script type="text/javascript" nonce="vLspUIHUHumQcvh2HU4wgA==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    // Always use the production asset in local dev, which is served from GCS. We tried to proxy and / or serve this
+    // in a better way in localhost, but it didn't work out. See b/328073416#comment8 for details.
+    const forceProdHost = window.location.hostname === "localhost";
+    lib.src = `${forceProdHost ? "https://www.kaggle.com" : ""}/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS_SVG`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>
